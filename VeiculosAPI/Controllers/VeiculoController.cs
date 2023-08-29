@@ -21,9 +21,9 @@ public class VeiculoController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Veiculo> RecuperaVeiculos()
+    public IEnumerable<Veiculo> RecuperaVeiculos([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
-        return veiculos;
+        return veiculos.Skip(skip).Take(take); // Escolha a faixa de veiculos a ser selecionada!!
     }
 
     [HttpGet("{id}")]
