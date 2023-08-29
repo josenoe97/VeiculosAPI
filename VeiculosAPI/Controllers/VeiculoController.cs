@@ -15,5 +15,12 @@ public class VeiculoController : ControllerBase
         veiculos.Add(veiculo);
         Console.WriteLine(veiculo.Marca);
         Console.WriteLine(veiculo.Modelo);
+        Console.WriteLine(veiculo.Ano);
+    }
+
+    [HttpGet]
+    public IEnumerable<Veiculo> RecuperaVeiculos()
+    {
+        return veiculos;
     }
 }

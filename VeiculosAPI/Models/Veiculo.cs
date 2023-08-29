@@ -4,17 +4,17 @@ namespace VeiculosAPI.Models;
 
 public class Veiculo
 {
-    [Key]
-    public int Id { get; set; }
+    /*[Key]
+    public int Id { get; set; }*/
 
-    [Required]
+    [Required(ErrorMessage = "{0} é obrigatório")]
     public string Marca { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "{0} é obrigatório")]
     public string Modelo { get; set; }
 
     [Required]
-    [DisplayFormat(DataFormatString = "{0:yyyy}")]
-    public DateTime Ano { get; set; }
+    [RegularExpression(@"^\d{4}$", ErrorMessage = "O ano deve estar no formato yyyy")]
+    public string Ano { get; set; }
 
 }
