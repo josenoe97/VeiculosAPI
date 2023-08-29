@@ -11,5 +11,5 @@ public class VeiculoContext : DbContext
         
     }
 
-    public DbSet<Veiculo> Veiculos { get; set; }
+    public DbSet<Veiculo> Veiculos { get; set; } // Foi o que criou a tabela "veiculos" no BD 
 }
