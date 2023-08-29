@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\VisualStudio\\Udemy\\VeiculosAPI\\VeiculosAPI\\VeiculosAPI.csproj": {}
+    "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\VeiculosAPI.csproj": {}
   },
   "projects": {
-    "H:\\VisualStudio\\Udemy\\VeiculosAPI\\VeiculosAPI\\VeiculosAPI.csproj": {
+    "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\VeiculosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\VisualStudio\\Udemy\\VeiculosAPI\\VeiculosAPI\\VeiculosAPI.csproj",
+        "projectUniqueName": "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\VeiculosAPI.csproj",
         "projectName": "VeiculosAPI",
-        "projectPath": "H:\\VisualStudio\\Udemy\\VeiculosAPI\\VeiculosAPI\\VeiculosAPI.csproj",
+        "projectPath": "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\VeiculosAPI.csproj",
         "packagesPath": "C:\\Users\\edson\\.nuget\\packages\\",
-        "outputPath": "H:\\VisualStudio\\Udemy\\VeiculosAPI\\VeiculosAPI\\obj\\",
+        "outputPath": "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
