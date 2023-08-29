@@ -8,10 +8,12 @@ namespace VeiculosAPI.Controllers;
 public class VeiculoController : ControllerBase
 {
     private static List<Veiculo> veiculos = new List<Veiculo>();
+    private static int id = 0;
 
     [HttpPost]
     public void AdicionaVeiculo([FromBody] Veiculo veiculo) //From body vendo do corpo da requisição
     {
+        veiculo.Id = id++;
         veiculos.Add(veiculo);
         Console.WriteLine(veiculo.Marca);
         Console.WriteLine(veiculo.Modelo);
@@ -22,5 +24,11 @@ public class VeiculoController : ControllerBase
     public IEnumerable<Veiculo> RecuperaVeiculos()
     {
         return veiculos;
+    }
+
+    [HttpGet("{id}")]
+    public Veiculo? RecuperaVeiculoPorId(int id)
+    {
+        return veiculos.FirstOrDefault(veiculo => veiculo.Id == id);
     }
 }
