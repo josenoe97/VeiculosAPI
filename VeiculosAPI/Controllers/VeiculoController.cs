@@ -27,8 +27,10 @@ public class VeiculoController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public Veiculo? RecuperaVeiculoPorId(int id)
+    public IActionResult RecuperaVeiculoPorId(int id) // IActionResult é padrão REST
     {
-        return veiculos.FirstOrDefault(veiculo => veiculo.Id == id);
+        var veiculo = veiculos.FirstOrDefault(veiculo => veiculo.Id == id);
+        if (veiculo == null) return NotFound();
+        return Ok(veiculo);
     }
 }
