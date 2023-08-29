@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using VeiculosAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("VeiculoConnection");
+
+builder.Services.AddDbContext<VeiculoContext>(opts =>
+    opts.UseMySql(connectionString , ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
 

@@ -5,6 +5,7 @@ namespace VeiculosAPI.Models;
 public class Veiculo
 {
     [Key]
+    [Required]
     public int Id { get; set; }
 
     [Required(ErrorMessage = "{0} é obrigatório")]

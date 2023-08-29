@@ -11,13 +11,13 @@ public class VeiculoController : ControllerBase
     private static int id = 0;
 
     [HttpPost]
-    public void AdicionaVeiculo([FromBody] Veiculo veiculo) //From body vendo do corpo da requisição
+    public IActionResult AdicionaVeiculo([FromBody] Veiculo veiculo) //From body vendo do corpo da requisição // Padrão REST aplicado
     {
         veiculo.Id = id++;
         veiculos.Add(veiculo);
-        Console.WriteLine(veiculo.Marca);
-        Console.WriteLine(veiculo.Modelo);
-        Console.WriteLine(veiculo.Ano);
+        return CreatedAtAction(nameof(RecuperaVeiculoPorId), // Padrão REST aplicado
+            new { id = veiculo.Id }, 
+            veiculo);
     }
 
     [HttpGet]
