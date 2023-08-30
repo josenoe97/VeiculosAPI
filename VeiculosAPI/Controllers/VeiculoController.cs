@@ -20,7 +20,14 @@ public class VeiculoController : ControllerBase
         _mapper = mapper;
     }
 
+    /// <summary>
+    /// Adiciona um filme ao banco de dados
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult AdicionaVeiculo([FromBody] CreateVeiculoDto veiculoDto) //From body vendo do corpo da requisição // Padrão REST aplicado
     {
         // outra possibilidade, além do automapper
