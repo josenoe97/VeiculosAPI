@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5edoWueUVtJo3DKNBIyevEV6Bx1vjbFxj7jsiDHXpjrY1KwP2T1D2E6wjRgfvO9duC937sTM9ziZRKb6KiMHnQ==",
+  "dgSpecHash": "+YQ+QrlT2RcnrBWporppwvFtridP6ahJFTc+EBzpuvwmtjaH0Oi+tTKDYE19JB6iqioBIsyjZ5cxGg9FszQn7A==",
   "success": true,
   "projectFilePath": "H:\\VisualStudio\\Udemy\\VeiculosApi\\VeiculosAPI\\VeiculosAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\edson\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\edson\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\edson\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.10\\microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",
