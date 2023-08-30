@@ -2,7 +2,7 @@
 
 namespace VeiculosAPI.Data.Dtos
 {
-    public class CreateVeiculoDto
+    public class UpdateVeiculoDto
     {
 
         [Required(ErrorMessage = "{0} é obrigatório")]

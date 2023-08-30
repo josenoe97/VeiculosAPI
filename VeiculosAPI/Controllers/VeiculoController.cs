@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using VeiculosAPI.Data;
 using VeiculosAPI.Data.Dtos;
@@ -51,5 +52,39 @@ public class VeiculoController : ControllerBase
         var veiculo = _context.Veiculos.FirstOrDefault(veiculo => veiculo.Id == id);
         if (veiculo == null) return NotFound();
         return Ok(veiculo);
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult AtualizaVeiculo(int id,
+        [FromBody] UpdateVeiculoDto veiculoDto )
+    {
+        var veiculo = _context.Veiculos.FirstOrDefault(
+            veiculo => veiculo.Id == id);
+        
+        if (veiculo == null) return NotFound();
+
+        _mapper.Map(veiculoDto, veiculo);
+        _context.SaveChanges();
+        return NoContent(); // Status cod para atualização Padrão REST - Cod 204 
+    }
+
+    [HttpPatch("{id}")] // Mudanças parciais em JSON no código é necessario um Lib NewtonSoft
+    public IActionResult AtualizaVeiculoParcial(int id,
+        JsonPatchDocument<UpdateVeiculoDto> patch)
+    {
+        var veiculo = _context.Veiculos.FirstOrDefault(
+            veiculo => veiculo.Id == id);
+
+        if (veiculo == null) return NotFound();
+
+        var veiculoParaAtualizar = _mapper.Map<UpdateVeiculoDto>(veiculo);
+
+        patch.ApplyTo(veiculoParaAtualizar, ModelState);
+
+        if (!TryValidateModel(veiculoParaAtualizar)) return ValidationProblem(ModelState);
+
+        _mapper.Map(veiculoParaAtualizar, veiculo);
+        _context.SaveChanges();
+        return NoContent(); // Status cod para atualização Padrão REST - Cod 204 
     }
 }

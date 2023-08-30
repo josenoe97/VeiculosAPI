@@ -54,3 +54,7 @@ H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\System.Text.Json.
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\AutoMapper.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
