@@ -1,6 +1,14 @@
-﻿namespace VeiculosAPI.Profiles
+﻿using AutoMapper;
+using VeiculosAPI.Data.Dtos;
+using VeiculosAPI.Models;
+
+namespace VeiculosAPI.Profiles;
+
+public class VeiculoProfile : Profile
 {
-    public class VeiculoProfile
+    public VeiculoProfile()
     {
+        CreateMap<CreateVeiculoDto, Veiculo>();
+        CreateMap<UpdateVeiculoDto, Veiculo>();
     }
 }

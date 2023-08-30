@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using VeiculosAPI.Data;
+using VeiculosAPI.Data.Dtos;
 using VeiculosAPI.Models;
 
 namespace VeiculosAPI.Controllers;
@@ -9,15 +11,27 @@ namespace VeiculosAPI.Controllers;
 public class VeiculoController : ControllerBase
 {
     private VeiculoContext _context;
+    private IMapper _mapper;
 
-    public VeiculoController(VeiculoContext context)
+    public VeiculoController(VeiculoContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     [HttpPost]
-    public IActionResult AdicionaVeiculo([FromBody] Veiculo veiculo) //From body vendo do corpo da requisição // Padrão REST aplicado
+    public IActionResult AdicionaVeiculo([FromBody] CreateVeiculoDto veiculoDto) //From body vendo do corpo da requisição // Padrão REST aplicado
     {
+        // outra possibilidade, além do automapper
+        /*Veiculo veiculo = new Veiculo 
+        {
+            Marca = veiculoDto.Marca,
+            Modelo = veiculoDto.Modelo,
+            Ano = veiculoDto.Ano
+        };*/
+
+
+        Veiculo veiculo = _mapper.Map<Veiculo>(veiculoDto);
         _context.Veiculos.Add(veiculo);
         _context.SaveChanges();
         return CreatedAtAction(nameof(RecuperaVeiculoPorId), // Padrão REST aplicado

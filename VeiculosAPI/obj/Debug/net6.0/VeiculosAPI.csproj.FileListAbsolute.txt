@@ -52,3 +52,5 @@ H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\System.CodeDom.dl
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\System.Text.Json.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\AutoMapper.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
