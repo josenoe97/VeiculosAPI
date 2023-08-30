@@ -11,5 +11,6 @@ public class VeiculoProfile : Profile
         CreateMap<CreateVeiculoDto, Veiculo>();
         CreateMap<UpdateVeiculoDto, Veiculo>();
         CreateMap<Veiculo, UpdateVeiculoDto>();
+        CreateMap<Veiculo, ReadVeiculoDto>();
     }
 }

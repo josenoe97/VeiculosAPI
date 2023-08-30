@@ -41,9 +41,9 @@ public class VeiculoController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Veiculo> RecuperaVeiculos([FromQuery] int skip = 0, [FromQuery] int take = 50)
+    public IEnumerable<ReadVeiculoDto> RecuperaVeiculos([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
-        return _context.Veiculos.Skip(skip).Take(take); // Escolha a faixa de veiculos a ser selecionada!!
+        return _mapper.Map<List<ReadVeiculoDto>>(_context.Veiculos.Skip(skip).Take(take)); // Escolha a faixa de veiculos a ser selecionada!!
     }
 
     [HttpGet("{id}")]
@@ -51,7 +51,11 @@ public class VeiculoController : ControllerBase
     {
         var veiculo = _context.Veiculos.FirstOrDefault(veiculo => veiculo.Id == id);
         if (veiculo == null) return NotFound();
-        return Ok(veiculo);
+
+        var veiculoDto = _mapper.Map<ReadVeiculoDto>(veiculo);
+
+
+        return Ok(veiculoDto);
     }
 
     [HttpPut("{id}")]
@@ -86,5 +90,18 @@ public class VeiculoController : ControllerBase
         _mapper.Map(veiculoParaAtualizar, veiculo);
         _context.SaveChanges();
         return NoContent(); // Status cod para atualização Padrão REST - Cod 204 
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeletaVeiculo(int id)
+    {
+        var veiculo = _context.Veiculos.FirstOrDefault(
+            veiculo => veiculo.Id == id);
+
+        if(veiculo == null) return NotFound();
+
+        _context.Remove(veiculo);
+        _context.SaveChanges();
+        return NoContent();
     }
 }
