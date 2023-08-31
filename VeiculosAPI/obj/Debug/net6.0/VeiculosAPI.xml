@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VeiculosAPI</name>
+    </assembly>
+    <members>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.AdicionaVeiculo(VeiculosAPI.Data.Dtos.CreateVeiculoDto)">
+            <summary>
+            Adiciona um filme ao banco de dados
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.RecuperaVeiculos(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os filmes do bando de dados
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.RecuperaVeiculoPorId(System.Int32)">
+            <summary>
+            Retorna o filme de acordo com Id
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.AtualizaVeiculo(System.Int32,VeiculosAPI.Data.Dtos.UpdateVeiculoDto)">
+            <summary>
+            Altera os dados de um filme existente
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.AtualizaVeiculoParcial(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{VeiculosAPI.Data.Dtos.UpdateVeiculoDto})">
+            <summary>
+            Altera os dados pacialmente de um filme existente
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:VeiculosAPI.Controllers.VeiculoController.DeletaVeiculo(System.Int32)">
+            <summary>
+            Deleta um dado existente
+            </summary>
+            <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="T:VeiculosAPI.Migrations.CriandoTabelaDeVeiculo">
+            <inheritdoc />
+        </member>
+        <member name="M:VeiculosAPI.Migrations.CriandoTabelaDeVeiculo.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:VeiculosAPI.Migrations.CriandoTabelaDeVeiculo.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:VeiculosAPI.Migrations.CriandoTabelaDeVeiculo.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

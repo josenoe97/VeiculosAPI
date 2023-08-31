@@ -58,3 +58,5 @@ H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Microsoft.AspNetC
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\bin\Debug\net6.0\VeiculosAPI.xml
+H:\VisualStudio\Udemy\VeiculosApi\VeiculosAPI\obj\Debug\net6.0\VeiculosAPI.xml

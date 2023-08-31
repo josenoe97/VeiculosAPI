@@ -20,6 +20,7 @@ public class VeiculoController : ControllerBase
         _mapper = mapper;
     }
 
+    //----------------------------------------------------------------------------------------
     /// <summary>
     /// Adiciona um filme ao banco de dados
     /// </summary>
@@ -47,12 +48,26 @@ public class VeiculoController : ControllerBase
             veiculo);
     }
 
+    //----------------------------------------------------------------------------------------
+    /// <summary>
+    /// Retorna todos os filmes do bando de dados
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="200">Caso inserção seja feita com sucesso</response>
     [HttpGet]
     public IEnumerable<ReadVeiculoDto> RecuperaVeiculos([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
         return _mapper.Map<List<ReadVeiculoDto>>(_context.Veiculos.Skip(skip).Take(take)); // Escolha a faixa de veiculos a ser selecionada!!
     }
 
+    //----------------------------------------------------------------------------------------
+    /// <summary>
+    /// Retorna o filme de acordo com Id
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="200">Caso inserção seja feita com sucesso</response>
     [HttpGet("{id}")]
     public IActionResult RecuperaVeiculoPorId(int id) // IActionResult é padrão REST
     {
@@ -65,6 +80,13 @@ public class VeiculoController : ControllerBase
         return Ok(veiculoDto);
     }
 
+    //----------------------------------------------------------------------------------------
+    /// <summary>
+    /// Altera os dados de um filme existente
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="204">Caso inserção seja feita com sucesso</response>
     [HttpPut("{id}")]
     public IActionResult AtualizaVeiculo(int id,
         [FromBody] UpdateVeiculoDto veiculoDto )
@@ -79,6 +101,13 @@ public class VeiculoController : ControllerBase
         return NoContent(); // Status cod para atualização Padrão REST - Cod 204 
     }
 
+    //----------------------------------------------------------------------------------------
+    /// <summary>
+    /// Altera os dados pacialmente de um filme existente
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="204">Caso inserção seja feita com sucesso</response>
     [HttpPatch("{id}")] // Mudanças parciais em JSON no código é necessario um Lib NewtonSoft
     public IActionResult AtualizaVeiculoParcial(int id,
         JsonPatchDocument<UpdateVeiculoDto> patch)
@@ -99,6 +128,13 @@ public class VeiculoController : ControllerBase
         return NoContent(); // Status cod para atualização Padrão REST - Cod 204 
     }
 
+    //----------------------------------------------------------------------------------------
+    /// <summary>
+    /// Deleta um dado existente
+    /// </summary>
+    /// <param name="veiculoDto">Objeto com os campos necessários para criação de um filme</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="204">Caso inserção seja feita com sucesso</response>
     [HttpDelete("{id}")]
     public IActionResult DeletaVeiculo(int id)
     {
